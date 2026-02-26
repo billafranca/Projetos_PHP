@@ -1,0 +1,270 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins','Segoe UI',sans-serif;
+}
+
+/* CORES */
+:root{
+    --blue:#6f95e6;
+    --blue-soft:#9bb8ff;
+
+    --orange:#ee9e65;
+    --orange-soft:#ffb98a;
+
+    --text:#1e293b;
+}
+
+/* FUNDO MODERNO CONTÍNUO */
+body{
+    height:100vh;
+    overflow:hidden;
+
+    background: linear-gradient(
+        120deg,
+        #ee9e65 0%,
+        #ffb98a 35%,
+        #7aa2ff 65%,
+        #6f95e6 100%
+    );
+}
+
+/* NAVBAR */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 60px;
+
+    background:linear-gradient(90deg,#5a7be0,#6f95e6);
+    box-shadow:0 8px 30px rgba(0,0,0,.15);
+
+    z-index:1000;
+}
+
+/* LOGO */
+.nav-logo{
+    display:flex;
+    align-items:center;
+}
+
+.nav-logo img{
+    height:20%;
+    width:20%;
+}
+
+/* LINKS NAV */
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#ff802c;
+    font-weight:600;
+    position:relative;
+    transition:.3s;
+}
+
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:2px;
+    background:#ee9e65;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* LAYOUT */
+.page{
+    display:flex;
+    height:100vh;
+    padding-top:70px;
+}
+
+/* LADOS TRANSPARENTES (remove divisão) */
+.left,
+.right{
+    width:50%;
+    background:transparent;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+/* TEXTO ESQUERDA */
+.left-content{
+    max-width:480px;
+    color:white;
+    animation:fadeLeft .8s ease;
+}
+
+.left h1{
+    font-size:3.2rem;
+    margin-bottom:20px;
+}
+
+.left h2{
+    font-size:1.9rem;
+    margin-bottom:20px;
+}
+
+.left p{
+    line-height:1.6;
+    opacity:.95;
+}
+
+/* SHAPE DECORATIVO */
+.left::before{
+    content:'';
+    position:absolute;
+    width:320px;
+    height:320px;
+    background:rgba(255,255,255,.2);
+    filter:blur(120px);
+    border-radius:50%;
+    z-index:-1;
+}
+
+/* CARD LOGIN */
+.container{
+    width:380px;
+    background:rgba(255,255,255,.92);
+    padding:45px;
+    border-radius:18px;
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,.25),
+        0 0 80px rgba(111,149,230,.35);
+
+    backdrop-filter:blur(10px);
+    animation:fadeUp .8s ease;
+}
+
+.container h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#ee9e65;
+}
+
+/* LABEL */
+label{
+    font-size:13px;
+    color:#64748b;
+}
+
+/* INPUT */
+input{
+    width:100%;
+    padding:13px;
+    margin-top:6px;
+    margin-bottom:18px;
+    border:none;
+    border-radius:10px;
+    background:#f1f5f9;
+    transition:.25s;
+    font-size:14px;
+}
+
+input:focus{
+    outline:none;
+    background:white;
+    box-shadow:0 0 0 2px var(--blue);
+}
+
+/* BOTÃO */
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#ee9e65,#ff9f1c);
+    color:white;
+
+    font-weight:600;
+    letter-spacing:.5px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 25px rgba(0,0,0,.2);
+}
+
+button:active{
+    transform:translateY(-1px);
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeLeft{
+    from{
+        opacity:0;
+        transform:translateX(-40px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+
+.page{
+    flex-direction:column;
+}
+
+.left,
+.right{
+    width:100%;
+    height:50%;
+}
+
+.container{
+    width:90%;
+}
+
+.navbar{
+    padding:0 25px;
+}
+
+.nav-links{
+    gap:20px;
+}
+
+}
