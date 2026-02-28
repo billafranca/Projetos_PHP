@@ -29,7 +29,7 @@
             <div class="left-content">
                 
                 <h1>REDA+</h1>
-                <h2>Domine a escrita.<br>Torne-se um <font color="#edb51a">MESTRE!</font>
+                <h2>Domine a escrita.<br>Torne-se um <font color="#F97316">MESTRE!</font>
                 </h2>
 
                 <p>
@@ -45,7 +45,9 @@
         <div class="right">
 
             <div class="container">
-
+            <div class="CriarConta">
+                     <center><font color="white"><h3>Crie sua conta e <font color="#F97316">evolua!</font></h3></font></center>
+            </div>
 
                 <div class="btn-group">
                     <button type="button" onclick="location.href='login.php'">Login</button>

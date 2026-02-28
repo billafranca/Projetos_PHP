@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Conta | REDA+</title>
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
             <div class="left-content">
                 
                 <h1>REDA+</h1>
-                <h2>Domine a escrita.<br>Torne-se um <font color="#edb51a">MESTRE!</font>
+                <h2>Domine a escrita.<br>Torne-se um <font color="#F97316">MESTRE!</font>
                 </h2>
 
                 <p>
@@ -46,7 +46,9 @@
 
             <div class="container">
 
-
+                <div class="deVolta">
+                    <center><h4>Bem vindo de <font color="#F97316">volta!</font></h4></center>
+                </div>
                 <div class="btn-group">
                     <button type="button" onclick="location.href='login.php'">Login</button>
                     <button type="button" onclick="location.href='cadastro.php'">Cadastro</button>
@@ -68,6 +70,9 @@
                         <button type="button" class="toggle-password" onclick="togglePassword()">
                             👁️
                         </button>
+                    </div>
+                    <div class="forgot-password">
+                        <center><a href="#">Esqueci minha senha</a></center>
                     </div>
 
                     <script>
@@ -96,7 +101,7 @@
 
     <div class="SegundaParte">
         <div class="left-content-2">
-            <h2>Por que escolher o REDA+ ?</h2>
+            <h2>Por que escolher o <font color="#F97316">REDA+ ?</font></h2>
             <p>
                 O REDA+ é a plataforma ideal para quem deseja aprimorar suas habilidades de escrita. Com uma comunidade ativa, você pode compartilhar suas redações, receber feedback detalhado e aprender com os outros. Nossa abordagem estratégica ajuda você a evoluir de forma consistente, tornando-se um mestre na arte da redação.
             </p>
