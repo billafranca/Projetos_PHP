@@ -4,6 +4,7 @@ class Usuario{
     private $nome;
     private $email;
     private $senha;
+    private $pdo;
 
 
 
@@ -60,5 +61,19 @@ class Usuario{
             return false;
         }
     }
+    public class inserUser($user, $email, $senha){
+
+        $sql = "INSERT INTO usuarios SET nome = :n email = :e senha = :s";
+
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->bindValue(":n", $nome);
+        $stmt->bindValue(":e", $email);
+        $stmt->bindValue(":s", $senha);
+
+        return $stmt->execute();
+    }
+
 
 }
+?>
